@@ -341,7 +341,7 @@
 <p>1.引入组件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> submitmodal <span class="keyword">from</span> <span class="string">'../components/SubmitModal'</span>;</div></pre></td></tr></table></figure>
 <p>2.动态组件 :is 绑定</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;component  :is=<span class="string">"currentView"</span> :title=<span class="string">"submitModal.title"</span> :show.sync=<span class="string">"submitModal.show"</span> :text=<span class="string">"submitModal.text"</span> :on-close=<span class="string">"closesubmitModal"</span> :on-ok=<span class="string">"submitModal.onOk"</span> :type=<span class="string">"submitModal.type"</span> :hasinput=<span class="string">"submitModal.hasInput"</span> :input.sync=<span class="string">"submitModal.input"</span>&gt;&lt;/component&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;component  :is=<span class="string">"currentView"</span> :title=<span class="string">"submitModal.title"</span> :show.sync=<span class="string">"submitModal.show"</span> :text=<span class="string">"submitModal.text"</span> :on-close=<span class="string">"closesubmitModal"</span> :on-ok=<span class="string">"submitModal.onOk"</span> :type=<span class="string">"submitModal.type"</span> :hasinput=<span class="string">"submitModal.hasInput"</span> :input.sync=<span class="string">"submitModal.input"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span></div></pre></td></tr></table></figure>
 <p>3.data参数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">submitModal: &#123;</div><div class="line">      title: <span class="string">''</span>,</div><div class="line">      show: <span class="literal">false</span>,</div><div class="line">      hasInput: <span class="literal">false</span>,</div><div class="line">      showError: <span class="literal">false</span>,</div><div class="line">      text: <span class="string">''</span>,</div><div class="line">      type: <span class="string">''</span>,</div><div class="line">      onOk: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    currentView: <span class="string">''</span></div></pre></td></tr></table></figure>
 <p>4.显示组件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> self = <span class="keyword">this</span>;</div><div class="line">self.submitModal.show = <span class="literal">true</span>;</div><div class="line">self.submitModal.title = <span class="string">'审批拒绝'</span>;</div><div class="line">self.submitModal.type = <span class="string">'delete'</span>;</div><div class="line">self.submitModal.hasInput = <span class="literal">true</span>;</div><div class="line">self.submitModal.text = <span class="string">'请填写拒绝的原因'</span>;</div><div class="line">self.submitModal.onOk = makeFail;</div><div class="line">self.currentView = <span class="string">''</span>;</div><div class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  self.currentView = <span class="string">'submitmodal'</span>;</div><div class="line">&#125;, <span class="number">1</span>);</div></pre></td></tr></table></figure></p>
@@ -385,18 +385,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/07/微信页面指定文字复制粘贴/" rel="next" title="微信页面指定文字复制粘贴">
-                <i class="fa fa-chevron-left"></i> 微信页面指定文字复制粘贴
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/07/6种继承/" rel="prev" title="6种继承">
-                6种继承 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/10/07/微信页面指定文字复制粘贴/" rel="prev" title="微信页面指定文字复制粘贴">
+                微信页面指定文字复制粘贴 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -487,7 +483,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -498,7 +494,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
