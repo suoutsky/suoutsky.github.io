@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1.0,user-scalable=0"
+  />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="好天气"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css">
+    <title>好天气</title>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but AppLivingNewH5 doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <script>
+      const html = document.getElementsByTagName("html")[0];
+      const maxWidth = window.innerWidth > 400 ? 400: window.innerWidth;
+      const width = (maxWidth / 375) * 100;
+      html.style.fontSize = width + "px";
+      window.authorization_bridge = false;
+    </script>
+    <div id="root"></div>
+  </body>
+  <!-- 调试时放开-->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.3.4/vconsole.min.js"></script>
+  <script>
+    var vConsole = new VConsole();
+    console.log('vConsole init');
+  </script> -->
+</html>

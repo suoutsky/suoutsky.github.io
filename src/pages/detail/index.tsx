@@ -1,0 +1,68 @@
+import styles from './index.module.less';
+import { Link } from 'react-router-dom';
+import { useState, useEffect }from 'react'
+import { getWeather24h, getWeather7d }  from '../../api';
+import DatesWeather from './components/datesWeather';
+import HoursWeather from './components/hoursWeather';
+import Storage from '@/utils/storage'
+
+const weatherDetail = [
+    {name:'降雨量', unit:'%', key: '1'}, 
+    {name:'湿度', unit:'%', key: '2'}, 
+    {name:'风度', unit:'km/h', key: '3'}
+]
+export default function Detail () {
+    const [weatherHoursRes, setWeatherHoursRes] = useState([])
+    const [weatherDatesRes, setWeatherDatesRes] = useState([])
+
+    useEffect(() => {
+        // 获取7天
+        getWeather7d().then((res) => {
+            Storage.setItem('weatherDatesRes', {value: res.daily})
+            setWeatherDatesRes(res.daily);
+        }).catch(async (err) => {
+            const res = await Storage.getItem('weatherDatesRes')
+            if(res) {
+              setWeatherDatesRes(res.value)
+            }
+        });
+        // 获取24小时
+        getWeather24h().then((res) => {
+            Storage.setItem('weatherHoursRes', {value:res.hourly})
+            setWeatherHoursRes(res.hourly);
+        }).catch(async (err) => {
+            const res = await Storage.getItem('weatherHoursRes')
+            if(res) {
+                setWeatherHoursRes(res.value)
+            }
+        });
+      }, []);
+
+    let weatherDetailcp = weatherDetail.map((item)=>{
+        return (
+         <div className={styles.weatherDetailItem}  key={item.key}>
+           <div className={styles.weatherDetailItemLeft}>{item.name}</div>
+           <div className={styles.weatherDetailItemRight}>
+            <div className={styles.number}>{item.key}</div>
+            <div className={styles.unit}>{item.unit}</div>
+           </div>
+         </div>
+        )
+    });
+   return (
+       <div className={styles.detail}>
+           <div className={styles.back}><Link to="/home">←</Link></div>
+           <div className={styles.raindrop}></div>  
+           <div className={styles.city}>杭州市, 浙江省</div>
+           <div className={styles.temperatureWarp}>
+              <div className={styles.number}>15</div>
+              <div className={styles.util}>°C</div>
+            </div>
+           <div className={styles.weatherDetail}>
+              {weatherDetailcp}
+           </div>
+           <HoursWeather weatherList={weatherHoursRes}/>
+           <DatesWeather weatherList={weatherDatesRes}/>
+       </div>
+   )
+}
