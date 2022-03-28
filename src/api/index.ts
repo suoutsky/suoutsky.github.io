@@ -2,10 +2,10 @@ import request from '../utils/network/request';
 
 // 日期天气类型
 export type dateWeather = {
-    fxDate: string, // 日期
-    tempMax: string, // 最高温度
-    tempMin: string, // 最低温度
-    iconDay: string // 图标
+  fxDate: string, // 日期
+  tempMax: string, // 最高温度
+  tempMin: string, // 最低温度
+  iconDay: string // 图标
 }
 // 小时天气类型
 export type hourWeather = {
