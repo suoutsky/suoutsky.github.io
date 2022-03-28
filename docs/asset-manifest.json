@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4914a9ce.chunk.css",
+    "main.js": "/static/js/main.9f6afcd7.chunk.js",
+    "main.js.map": "/static/js/main.9f6afcd7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7c0cbcb4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7c0cbcb4.js.map",
+    "static/css/2.2b30dd32.chunk.css": "/static/css/2.2b30dd32.chunk.css",
+    "static/js/2.e1f2c613.chunk.js": "/static/js/2.e1f2c613.chunk.js",
+    "static/js/2.e1f2c613.chunk.js.map": "/static/js/2.e1f2c613.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.2b30dd32.chunk.css.map": "/static/css/2.2b30dd32.chunk.css.map",
+    "static/css/main.4914a9ce.chunk.css.map": "/static/css/main.4914a9ce.chunk.css.map",
+    "static/js/2.e1f2c613.chunk.js.LICENSE.txt": "/static/js/2.e1f2c613.chunk.js.LICENSE.txt",
+    "static/media/index.module.less": "/static/media/raindrop.a8af4a16.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c0cbcb4.js",
+    "static/css/2.2b30dd32.chunk.css",
+    "static/js/2.e1f2c613.chunk.js",
+    "static/css/main.4914a9ce.chunk.css",
+    "static/js/main.9f6afcd7.chunk.js"
+  ]
+}
