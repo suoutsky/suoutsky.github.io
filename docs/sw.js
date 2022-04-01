@@ -2,12 +2,13 @@
 const CACHE_NAME = 'my-site-cache';
 const ROOT_URL = '<https://suoutsky.github.io/>';
 const urlsToCache = [
-  '/',            // 不要缓存根目录，否则页面一直都会加载缓存无法更新
-  '/static/js/2.3730d9fa.chunk.js',  // 默认缓存/imgs/test.jpg
+  '/',  
+  '/static/js/2.3730d9fa.chunk.js', 
   '/static/js/main.0b061914.chunk.js',
   '/static/css/main.57713487.chunk.css',
   '/static/css/2.2b30dd32.chunk.css',
   '/static/js/runtime-main.7c0cbcb4.js',
+  '/static/media/raindrop.a8af4a16.png',
 ];
 
 /**
